@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#myTwitter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #56CCF2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#myTwitter h1 {
+    color: #333;
+    font-size: 1.5em;
+    padding: 10px;
+    align-self: center;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    height: 300px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.app textarea {
+    width: 500px;
+    height: 100px;
+    margin: 20px 0;
+    border: 2px solid #74b9ff;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.app button {
+    width: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background: #74b9ff;
+    font-weight: 400;
+    transition: .3s;
+    align-self: flex-end;
+    margin-right: 48px;
+}
+
+
+/* .app button:hover {
+    background: #0984e3;
+} */
+
+.app button[disabled] {
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.button_and_caracters {
+    display: flex;
+    width: 100;
+    justify-content: flex-end;
+}
+
+.button_and_caracters span {
+    padding: 10px;
+}
+.colorDark {
+    color: #d63031;
+}
+.colorLight {
+    color: #ff7675;
+}]

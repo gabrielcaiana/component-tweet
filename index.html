@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+    <script src="app.js"></script>
+    <title>Post Twitter</title>
+</head>
+
+<body>
+    <div id="myTwitter">
+        <div class="app">
+            <h1>Digite um novo Tweet</h1>
+            <textarea v-model="tweet"></textarea>
+            <div class="button_and_caracters">
+                <span v-bind:class="{ 'colorDark': markRedDarkIfTwenty, 'colorLight': markRedLightIfTen }">{{ caracterRestante }}</span>
+                <button :disabled="tweetIsOutOfRange">Tweet</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+       
+        new Vue({
+            el: '#myTwitter',
+            data: {
+                tweet: '',
+                max_tweet_length: 140
+            },
+            computed: {
+                tweetIsOutOfRange: function () {
+                    return this.caracterRestante == max_tweet_length || this.caracterRestante < 0
+                },
+                caracterRestante: function () {
+                    return max_tweet_length - this.tweet.length
+                },
+                markRedDarkIfTwenty: function () {
+                    return this.caracterRestante <=20 && this.caracterRestante > 10
+                },
+                markRedLightIfTen: function () {
+                    return this.caracterRestante <= 10
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
